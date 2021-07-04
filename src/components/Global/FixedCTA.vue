@@ -28,12 +28,12 @@ export default {
     background-color: transparent;
   }
   .btn-faq {
-    @apply rounded-full p-5 lg:p-8 cursor-pointer fixed right-10 bottom-28 text-white z-30; 
+    @apply rounded-full p-5 lg:p-8 cursor-pointer fixed right-10 bottom-80 text-white z-30; 
     background-color: #e47b18;
   }
 
   .social-btn {
-      @apply space-x-2 rounded-full fixed bottom-36  left-10 z-50 hidden lg:flex; 
+      @apply space-x-2 rounded-full fixed bottom-96  left-10 z-50 hidden lg:flex; 
   }
 
  
