@@ -1,21 +1,27 @@
 <template>
   <section id="services" class="services-container">
-    <img src="../../assets/Services_hand.png" class="absolute left-24 bottom-0 object-contain hidden lg:block" />
+    <img
+      src="../../assets/Services_hand.png"
+      class="absolute left-24 bottom-0 object-contain hidden lg:block"
+    />
     <div class="wrapper">
       <div>
         <div class="wrapper-box">
           <h3 class="wrapper-title">Nossos serviços</h3>
-          <h1 class="wrapper-main-message">Falou em comida congelada de qualidade?  Pensou no Feijones!
-</h1>
+          <h1 class="wrapper-main-message">
+            Falou em comida congelada de qualidade? Pensou no Feijones!
+          </h1>
           <h2 class="wrapper-second-message">
-            Chegamos para oferecer praticidade e sabor a sua rotina! O Feijones é o seu novo contato de comida congelada, só que com uma diferença, nossos pratos tem gostinho de comida caseira feita na hora. 
+            Chegamos para oferecer praticidade e sabor a sua rotina! O Feijones
+            é o seu novo contato de comida congelada, só que com uma diferença,
+            nossos pratos tem gostinho de comida caseira feita na hora.
           </h2>
           <div>
-              <div class="wrapper-cta"><span>Peça agora</span></div>
+            <div class="wrapper-cta"><span>Peça agora</span></div>
           </div>
         </div>
       </div>
-      <div class=""></div>
+      <!-- <div class=""></div> -->
     </div>
   </section>
 </template>
@@ -27,7 +33,8 @@ export default {};
 <style lang="postcss" scoped>
 @layer components {
   .services-container {
-    @apply h-screen w-screen overflow-x-hidden flex flex-row-reverse justify-around items-center relative z-0;
+    /* @apply h-screen w-screen overflow-x-hidden flex flex-row-reverse  items-center relative z-0; */
+    @apply h-screen w-screen overflow-x-hidden flex flex-row items-center justify-end relative z-0;
     background-image: url("../../assets/background_cartes.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -35,17 +42,21 @@ export default {};
   }
 
   .services-container::after {
-    @apply absolute w-full h-full bg-white bg-opacity-50 ;
+    @apply absolute w-full h-full bg-white bg-opacity-50;
     z-index: -1;
     content: "";
   }
 
   .wrapper {
-    @apply lg:w-4/6 flex justify-center lg:justify-end xl:justify-end 2xl:justify-center;
+    /* @apply lg:w-4/6 flex justify-center lg:justify-end xl:justify-end 2xl:justify-center; */
+    /* @apply flex justify-center bg-black; */
+    @apply pr-52;
   }
 
   .wrapper-box {
-      @apply w-80 xl:w-96;
+    /* @apply bg-black; */
+    @apply pr-10 space-y-3;
+    max-width: 500px;
   }
 
   .wrapper-title {
@@ -67,9 +78,9 @@ export default {};
   }
 
   .wrapper-cta {
-      @apply text-white py-2 px-20 w-64 text-center rounded-xl cursor-pointer font-black;
-      background-color: #593100;
-      font-family: "Roboto Slab";
+    @apply text-white py-2 px-20 w-64 text-center rounded-xl cursor-pointer font-black;
+    background-color: #593100;
+    font-family: "Roboto Slab";
   }
 
   /* @media (min-width: 1024px and max-width: 1280px) {

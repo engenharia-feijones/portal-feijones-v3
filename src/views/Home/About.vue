@@ -4,12 +4,9 @@
       <div>
         <div class="wrapper-box">
           <h3 class="wrapper-title">Quem somos</h3>
-          <h1 class="wrapper-main-message"> A combinação perfeita entre o feijão e a tecnologia!</h1>
-          <!-- <h2 class="wrapper-second-message">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </h2> -->
+          <h1 class="wrapper-main-message">Combinação perfeita entre<br /> o feijão e tecnologia!</h1>
           <h3 class="wrapper-third-message">
-           O Feijones nasceu da necessidade do brasileiro em ter um feijão de qualidade compondo sua alimentação no dia a dia.  Nós entendemos que diante do fluxo de vida cada vez mais acelerado a dificuldade de destinar tempo ao preparo aumentou consideravelmente. Pensando nesse público, desenvolvemos feijão congelado com a qualidade e sabor do feijão caseiro, utilizando o delivery para ofertar comodidade aos nossos clientes.
+          Desenvolvemos feijão congelado com a qualidade e sabor do feijão caseiro, utilizando o delivery para ofertar comodidade aos nossos clientes.
           </h3>
           <div class="wrapper-cta">
             Saiba mais
@@ -47,7 +44,7 @@ export default {
 <style lang="postcss" scoped>
 @layer components {
   .about-container {
-    @apply h-screen w-screen flex items-center justify-center overflow-x-hidden relative z-0;
+    @apply h-screen w-screen flex items-center justify-start pl-24 overflow-x-hidden relative z-0;
     background-image: url("../../assets/Sobre_BG.png");
     background-position: right;
     background-repeat: no-repeat;
@@ -55,9 +52,10 @@ export default {
   }
   
   .about-container::after {
-    @apply w-full h-full absolute;
+    @apply w-screen h-screen top-0 right-0 absolute;
     content: "";
-    background-color: gray;
+    background-image: url('../../assets/teste_about.png');
+    background-size: cover;
     opacity: .3;
     z-index: -1;
   }
@@ -67,16 +65,16 @@ export default {
   }
 
   .wrapper-box {
-    @apply flex flex-col flex-wrap w-96 mx-11;
+    @apply flex flex-col space-y-5 flex-wrap  mx-11;
   }
 
   .wrapper-title {
-    @apply lg:text-2xl;
+    @apply lg:text-2xl font-black;
     font-family: "Roboto Slab";
   }
 
   .wrapper-main-message {
-    @apply text-5xl leading-tight font-black;
+    @apply text-3xl leading-tight font-black mb-3;
     font-family: "Roboto Slab";
     color: #e47b18;
   }
@@ -87,13 +85,13 @@ export default {
   }
 
   .wrapper-third-message {
-    @apply font-normal leading-tight;
+    @apply font-semibold leading-tight w-96;
     font-family: "Rockwell";
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .wrapper-cta {
-    @apply text-2xl leading-tight my-3 flex items-center relative cursor-pointer;
+    @apply text-2xl leading-tight my-3 flex items-center relative cursor-pointer font-black;
     font-family: "Roboto Slab";
     color: #e47b18;
   }

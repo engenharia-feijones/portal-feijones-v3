@@ -1,6 +1,6 @@
 <template>
   <nav class="nav-container">
-    <a  @click="navigateTo('/')" class="header-links">Inicio</a>
+    <a  @click="navigateTo('/')" class="header-links">Início</a>
     <a  @click="navigateTo('/about')" class="header-links">Sobre nós</a>
     <a  @click="navigateTo('/services')" class="header-links">Nossos Serviços</a>
     <a  class="header-links">FAQ</a>

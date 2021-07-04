@@ -7,12 +7,12 @@
     </div>
     <div class="cards-container">
       <div class="card card-1">
-        <h1 class="card-title">Preto</h1>
+        <h1 class="card-title">Marrom</h1>
         <div class="card-cta">Peça agora</div>
         <h1 class="card-info">Saiba mais</h1>
       </div>
       <div class="card card-2">
-        <h1 class="card-title">Marron</h1>
+        <h1 class="card-title">Preto</h1>
         <div class="card-cta">Peça agora</div>
         <h1 class="card-info">Saiba mais</h1>
       </div>
