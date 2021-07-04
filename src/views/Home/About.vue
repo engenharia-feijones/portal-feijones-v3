@@ -3,15 +3,13 @@
     <div class="wrapper">
       <div>
         <div class="wrapper-box">
-          <h3 class="wrapper-title">Sobre Nós</h3>
-          <h1 class="wrapper-main-message">Lorem ipsun dolor sit amet</h1>
-          <h2 class="wrapper-second-message">
+          <h3 class="wrapper-title">Quem somos</h3>
+          <h1 class="wrapper-main-message"> A combinação perfeita entre o feijão e a tecnologia!</h1>
+          <!-- <h2 class="wrapper-second-message">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </h2>
+          </h2> -->
           <h3 class="wrapper-third-message">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, justo
-            interdum et lectus. Leo, quisque neque laoreet dignissim eget ut.
-            Consectetur cursus.
+           O Feijones nasceu da necessidade do brasileiro em ter um feijão de qualidade compondo sua alimentação no dia a dia.  Nós entendemos que diante do fluxo de vida cada vez mais acelerado a dificuldade de destinar tempo ao preparo aumentou consideravelmente. Pensando nesse público, desenvolvemos feijão congelado com a qualidade e sabor do feijão caseiro, utilizando o delivery para ofertar comodidade aos nossos clientes.
           </h3>
           <div class="wrapper-cta">
             Saiba mais
@@ -69,7 +67,7 @@ export default {
   }
 
   .wrapper-box {
-    @apply flex flex-col flex-wrap w-80 mx-11;
+    @apply flex flex-col flex-wrap w-96 mx-11;
   }
 
   .wrapper-title {

@@ -1,6 +1,6 @@
 <template>
   <section id="contactUs" class="contact-container">
-    <h1 class="contact-title">Lorem ipsum dolor</h1>
+    <h1 class="contact-title">Queremos te ouvir!</h1>
     <div class="wrapper">
       <form class="form-container" @submit.prevent="sendForm()">
         <input

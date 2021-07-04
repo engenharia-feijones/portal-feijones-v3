@@ -1,7 +1,7 @@
 <template>
   <section section="#about" class="about-container">
       <img src="../../assets/heart_about.svg" alt="">
-      <h1 class="about-container-title">Lorem Ipsun<br /> dolor sit amet</h1>
+      <h1 class="about-container-title">Mais que feijão congelado, Feijones!</h1>
       <div class="about-container-cta" @click="smothScroll()">
           <img src="../../assets/down_arrow.svg" alt="">
           <img src="../../assets/down_arrow.svg" alt="">

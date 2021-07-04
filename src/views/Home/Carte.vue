@@ -2,23 +2,22 @@
   <section id="#carte" class="carte-container">
     <div class="carte-container-title">
       <h1 class="word-break">
-        Lorem ipsun<br />
-        dolor sit amet
+       Cardápio
       </h1>
     </div>
     <div class="cards-container">
       <div class="card card-1">
-        <h1 class="card-title">Bacon</h1>
+        <h1 class="card-title">Preto</h1>
         <div class="card-cta">Peça agora</div>
         <h1 class="card-info">Saiba mais</h1>
       </div>
       <div class="card card-2">
-        <h1 class="card-title">Charque</h1>
+        <h1 class="card-title">Marron</h1>
         <div class="card-cta">Peça agora</div>
         <h1 class="card-info">Saiba mais</h1>
       </div>
       <div class="card card-3">
-        <h1 class="card-title">Vegetariano</h1>
+        <h1 class="card-title">Feijoada</h1>
         <div class="card-cta">Peça agora</div>
         <h1 class="card-info">Saiba mais</h1>
       </div>

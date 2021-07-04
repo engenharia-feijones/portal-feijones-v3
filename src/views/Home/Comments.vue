@@ -1,6 +1,6 @@
 <template>
   <section id="comment" class="comment-container">
-    <div class="comment-container-title" >Lorem Ipsu dolor</div>
+    <div class="comment-container-title" >Contra fatos não há argumentos!</div>
     <div class="comments-wrapper">
       <div class="comment-content inactive" >
         <div class="comment-info-box">

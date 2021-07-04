@@ -7,12 +7,13 @@
     <div class="about-us-content flex-1">
       <h1 class="about-us-content-title">Sobre nós</h1>
       <h1 class="about-us-content-main">
-        Lorem Ipsun<br />
-        dolor sit amet
+       Falar da gente é fácil, sabe aquele grupo de amigos apaixonados por  feijão e tecnologia? Somos nós!
+
       </h1>
       <h1 class="about-us-content-second">
-        Lorem ipsum dolor sit amet,<br />
-        consectur adipiscing elit.
+       O Feijones nasceu da necessidade do brasileiro em ter um feijão de qualidade compondo sua alimentação no dia a dia.  Nós entendemos que diante do fluxo de vida cada vez mais acelerado a dificuldade de destinar tempo ao preparo aumentou consideravelmente. Pensando nesse público, desenvolvemos feijão congelado com a qualidade e sabor do feijão caseiro, utilizando o delivery para ofertar comodidade aos nossos clientes. <br /> <br />
+
+A experiência proporcionada por nossa empresa se baseia na construção de memórias afetivas, tendo como embasamento a qualidade dos produtos e a satisfação.
       </h1>
       <h1 @click="navigateToServices()" class="about-us-content-cta">
         Nossos Serviços

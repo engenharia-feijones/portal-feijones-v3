@@ -1,9 +1,10 @@
 <template>
   <section id="bacon" class="bacon-container">
       <h1 class="bacon-content-title">
-          Lorem Ipsum
+           Produtos selecionados
       </h1>
-      <h1 class="bacon-content-main">Lorem ipsum<br /> dolor sit amet.</h1>
+      <h1 class="bacon-content-main">Muito mais sabor para você!
+</h1>
       <h1 class="bacon-content-cta">Lorem ipsum</h1>
   </section>
 </template>

@@ -3,19 +3,18 @@
     <div class="wrapper-box">
       <h3 class="wrapper-title">Nosso Serviço</h3>
       <h1 class="wrapper-main-message">
-        Lorem ipsun<br class="hidden lg:block" />
-        dolor sit amet
+        Falou em feijão e tecnologia?<br />Pensou no Feijones!
       </h1>
       <h2 class="wrapper-second-message">
-        Lorem ipsum dolor sit amet,<br class="hidden lg:block" />
-        consectetur adipiscing elit.
+       Chegamos para oferecer praticidade e sabor a sua rotina!<br /> O Feijones é o seu novo contato de comida congelada, <br />só que com uma diferença,<br />nossos pratos tem gostinho de comida caseira feita na hora. 
+
       </h2>
-      <h3 class="wrapper-third-message">
+      <!-- <h3 class="wrapper-third-message">
         Lorem ipsum dolor sit amet, consectetur<br class="hidden lg:block" />adipiscing elit. Enim,
         justo interdum et <br class="hidden lg:block" />
         lectus. Leo, quisque neque laoreet<br class="hidden lg:block"  />dignissim eget ut. Consectetur
         cursus.
-      </h3>
+      </h3> -->
       <div class="wrapper-cta">
         Saiba mais
         <svg

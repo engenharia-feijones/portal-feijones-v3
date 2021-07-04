@@ -5,9 +5,10 @@
       <div>
         <div class="wrapper-box">
           <h3 class="wrapper-title">Nossos serviços</h3>
-          <h1 class="wrapper-main-message">Lorem ipsun dolor sit amet</h1>
+          <h1 class="wrapper-main-message">Falou em comida congelada de qualidade?  Pensou no Feijones!
+</h1>
           <h2 class="wrapper-second-message">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Chegamos para oferecer praticidade e sabor a sua rotina! O Feijones é o seu novo contato de comida congelada, só que com uma diferença, nossos pratos tem gostinho de comida caseira feita na hora. 
           </h2>
           <div>
               <div class="wrapper-cta"><span>Peça agora</span></div>
@@ -48,7 +49,7 @@ export default {};
   }
 
   .wrapper-title {
-    @apply lg:text-2xl xl:text-3xl font-black;
+    @apply lg:text-2xl xl:text-2xl font-black;
     font-family: "Roboto Slab";
     color: #593100;
   }

@@ -1,8 +1,7 @@
 <template>
   <section id="footerUs" class="about-footer-container">
     <h1 class="about-footer-title">
-      Lorem Ipsum<br class="hidden lg:block" />
-      dolor sit amet
+     Prove e tire suas próprias conclusões!
     </h1>
     <div>
       <!-- <div class="about-footer-content ">
