@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;900&display=swap');
+@import url(//db.onlinewebfonts.com/c/4aa3e37e571255737e5e6d4e9d9770a5?family=Rockwell);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#about, #services {
+    overflow-x: hidden;
+}

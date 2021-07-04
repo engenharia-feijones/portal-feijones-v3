@@ -1,0 +1,104 @@
+<template>
+  <section id="about" class="about-container">
+    <div class="wrapper">
+      <div>
+        <div class="wrapper-box">
+          <h3 class="wrapper-title">Sobre Nós</h3>
+          <h1 class="wrapper-main-message">Lorem ipsun dolor sit amet</h1>
+          <h2 class="wrapper-second-message">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </h2>
+          <h3 class="wrapper-third-message">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, justo
+            interdum et lectus. Leo, quisque neque laoreet dignissim eget ut.
+            Consectetur cursus.
+          </h3>
+          <div class="wrapper-cta">
+            Saiba mais
+            <svg
+              class="ml-3"
+              style="transform: translateY(3px)"
+              width="28"
+              height="23"
+              viewBox="0 0 28 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 9.54752C1.17157 9.54752 0.5 10.2191 0.5 11.0475C0.5 11.8759 1.17157 12.5475 2 12.5475L2 9.54752ZM27.1258 12.1082C27.7115 11.5224 27.7115 10.5726 27.1258 9.98685L17.5798 0.440913C16.994 -0.144874 16.0443 -0.144874 15.4585 0.440913C14.8727 1.0267 14.8727 1.97645 15.4585 2.56223L23.9438 11.0475L15.4585 19.5328C14.8727 20.1186 14.8727 21.0683 15.4585 21.6541C16.0443 22.2399 16.994 22.2399 17.5798 21.6541L27.1258 12.1082ZM2 12.5475L26.0651 12.5475L26.0651 9.54751L2 9.54752L2 12.5475Z"
+                fill="#E47B18"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div></div>
+      
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  setup() {
+    return {};
+  },
+};
+</script>
+
+<style lang="postcss" scoped>
+@layer components {
+  .about-container {
+    @apply h-screen w-screen flex items-center justify-center overflow-x-hidden relative z-0;
+    background-image: url("../../assets/Sobre_BG.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .about-container::after {
+    @apply w-full h-full absolute;
+    content: "";
+    background-color: gray;
+    opacity: .3;
+    z-index: -1;
+  }
+
+  .wrapper {
+    @apply flex justify-between md:w-5/6 lg:w-5/6 xl:w-3/6;
+  }
+
+  .wrapper-box {
+    @apply flex flex-col flex-wrap w-80 mx-11;
+  }
+
+  .wrapper-title {
+    @apply lg:text-2xl;
+    font-family: "Roboto Slab";
+  }
+
+  .wrapper-main-message {
+    @apply text-5xl leading-tight font-black;
+    font-family: "Roboto Slab";
+    color: #e47b18;
+  }
+
+  .wrapper-second-message {
+    @apply text-2xl leading-tight mb-2 font-bold;
+    font-family: "Rockwell";
+  }
+
+  .wrapper-third-message {
+    @apply font-normal leading-tight;
+    font-family: "Rockwell";
+    font-size: 17px;
+  }
+
+  .wrapper-cta {
+    @apply text-2xl leading-tight my-3 flex items-center relative cursor-pointer;
+    font-family: "Roboto Slab";
+    color: #e47b18;
+  }
+
+}
+</style>
