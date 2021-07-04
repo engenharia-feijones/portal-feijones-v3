@@ -17,7 +17,7 @@
         <h1 class="card-info">Saiba mais</h1>
       </div>
       <div class="card card-3">
-        <h1 class="card-title">Feijoada</h1>
+        <h1 class="card-title">Feijonada</h1>
         <div class="card-cta">Peça agora</div>
         <h1 class="card-info">Saiba mais</h1>
       </div>

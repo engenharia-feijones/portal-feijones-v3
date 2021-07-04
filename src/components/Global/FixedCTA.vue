@@ -28,7 +28,7 @@ export default {
     background-color: transparent;
   }
   .btn-faq {
-    @apply rounded-full p-5 lg:p-5 cursor-pointer fixed right-10 bottom-5 box-content text-white z-30; 
+    @apply rounded-full p-5 lg:p-5 cursor-pointer fixed right-10 bottom-6 box-content text-white z-30; 
     background-color: #e47b18;
   }
 
