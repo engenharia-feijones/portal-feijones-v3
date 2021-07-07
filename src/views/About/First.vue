@@ -1,58 +1,36 @@
 <template>
-  <section section="#about" class="about-container">
-      <img src="../../assets/heart_about.svg" alt="">
-      <h1 class="about-container-title">Mais que feijão congelado, Feijones!</h1>
-      <div class="about-container-cta" @click="smothScroll()">
-          <img src="../../assets/down_arrow.svg" alt="">
-          <img src="../../assets/down_arrow.svg" alt="">
-      </div>
+  <section id="first" class="first-container">
+      <img src="../../assets/Svg/heart.svg" />
+      <h1 class="container__title">Mais que feijão congelado, Feijones!</h1>
+      <img src="../../assets/Svg/down_arrow.svg" class="actions" />
   </section>
 </template>
 
-<script>
-
-export default {
-  setup() {
-    const smothScroll = () => {
-      document.getElementById("aboutUs").scrollIntoView({ behavior: 'smooth'});
-    }
-
-    return { smothScroll }
-  }
-};
-</script>
-
-
 <style lang="postcss" scoped>
 @layer components {
-  .about-container {
-    @apply w-screen h-screen flex flex-col items-center justify-center relative z-0 ;
-    background-image: url("../../assets/background_about.png");
+  .first-container {
+    @apply h-screen w-screen flex flex-col items-center justify-center relative z-0 space-y-3;
+    background-image: url("../../assets/About/background_first.png");
+    background-position: 65%;
     background-repeat: no-repeat;
-    background-position: 60% 50%;
     background-size: cover;
   }
 
-  .about-container::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #6b3a0b;
-    z-index: -1;
-    opacity: 0.4;
+  .first-container::before {
+    @apply absolute h-full w-full inset-0 opacity-80;
     content: "";
+    background-image: url("../../assets/About/background_first_filter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
   }
 
-  .about-container-title {
-      @apply font-black text-4xl text-white;
-      font-family: "Roboto Slab"
+  .container__title {
+      @apply text-white font-black font-roboto text-center text-2xl lg:text-3xl;
   }
-
-  .about-container-cta {
-      @apply cursor-pointer lg:mt-32;
-      transform: translateY(9rem);
+  
+  .actions {
+      @apply absolute bottom-24 h-12 w-12 cursor-pointer ;
   }
 }
 </style>

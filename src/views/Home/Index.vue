@@ -1,38 +1,29 @@
-<template class="overflow-x-hidden">
+<template>
+  <div class="overflow-x-hidden">
     <About />
     <Services />
-    <Carte />
+    <Menu />
     <Comments />
     <ContactUs />
-    <!-- <Footer class="teste"/> -->
+  </div>
 </template>
 
 <script>
-import About from './About.vue'
-import Services from './Services.vue'
-import Carte from './Carte.vue'
-import Comments from './Comments.vue'
-import ContactUs from './ContactUs.vue'
-// import Footer from '../../components/Global/Footer.vue'
-
-    export default {
-        components: {
-            About,
-            Services,
-            Carte,
-            Comments,
-            ContactUs,
-            // Footer
-        }
-    }
+import About from "./About.vue";
+import Services from "./Services.vue";
+import Menu from "./Menu.vue";
+import Comments from "./Comments.vue";
+import ContactUs from "./ContactUs.vue";
+export default {
+  components: {
+    About,
+    Services,
+    Menu,
+    Comments,
+    ContactUs
+  },
+};
 </script>
 
 <style lang="postcss" scoped>
-    
-    @layer components {
-        .teste {
-            @apply absolute;
-            bottom: -403.5%;
-        }
-    }
 </style>

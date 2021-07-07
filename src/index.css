@@ -1,9 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;900&display=swap');
-@import url(//db.onlinewebfonts.com/c/4aa3e37e571255737e5e6d4e9d9770a5?family=Rockwell);
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-#about, #services {
-    overflow-x: hidden;
+.wrapper {
+  @apply flex-1 flex flex-col space-y-4 px-2 lg:ml-20;
+}
+
+.wrapper__title {
+  @apply font-roboto font-black;
+}
+
+.wrapper__main {
+  @apply text-3xl leading-tight font-black font-roboto text-primary_intense lg:w-96;
+}
+
+.wrapper__paragraph {
+  @apply font-semibold leading-tight font-arvo text-lg lg:w-96;
 }

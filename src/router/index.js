@@ -1,19 +1,17 @@
-import { createRouter, createWebHistory } from "vue-router";
-import IndexHome from "../views/Home/Index.vue";
-import IndexAbout from "../views/About/Index.vue";
-import IndexServices from "../views/Services/Index.vue";
-import Whatsapp from "../views/Whatsapp.vue";
+import { createRouter, createWebHistory } from 'vue-router'
+import IndexHome from '../views/Home/Index.vue'
+import IndexAbout from '../views/About/Index.vue'
+import IndexService from '../views/Service/Index.vue'
 
 const routes = [
-    { path: "/", name: "Home", component: IndexHome },
-    { path: '/about', name: "About", component: IndexAbout },
-    { path: '/services', name: "Services", component: IndexServices },
-    { path: '/whatsapp', name: "Whatsapp", component: Whatsapp },
-];
+    { path: '', name: 'Home', component: IndexHome },
+    { path: '/about', name: 'About', component: IndexAbout },
+    { path: '/services', name: 'Service', component: IndexService }
+]
 
 const router = createRouter({
-  history: createWebHistory(process.env.VUE_APP_BASE_URL),
-  routes,
-});
+    history: createWebHistory(),
+    routes,
+})
 
-export default router;
+export default router

@@ -1,27 +1,35 @@
 <template>
-  <section id="services" class="services-container">
-    <img
-      src="../../assets/Services_hand.png"
-      class="absolute left-24 bottom-0 object-contain hidden lg:block"
-    />
-    <div class="wrapper">
-      <div>
-        <div class="wrapper-box">
-          <h3 class="wrapper-title">Nossos serviços</h3>
-          <h1 class="wrapper-main-message">
-            Falou em comida congelada de qualidade? Pensou no Feijones!
-          </h1>
-          <h2 class="wrapper-second-message">
-            Chegamos para oferecer praticidade e sabor a sua rotina! O Feijones
-            é o seu novo contato de comida congelada, só que com uma diferença,
-            nossos pratos tem gostinho de comida caseira feita na hora.
-          </h2>
-          <div>
-            <div class="wrapper-cta"><span>Peça agora</span></div>
-          </div>
-        </div>
+  <section id="home-services" class="services-container">
+    <div class="wrapper mt-10 lg:hidden">
+      <h2 class="wrapper__title">Quem somos</h2>
+      <h1 class="wrapper__main">
+        Combinação perfeita entre o feijão e tecnologia!
+      </h1>
+      <h3 class="wrapper__paragraph">
+        Desenvolvemos feijão congelado com a qualidade e sabor do feijão
+        caseiro, utilizando o delivery para ofertar comodidade aos nossos
+        clientes.
+      </h3>
+      <div class="wraper_cta_container">
+        <span class="wrapper_cta_text">Saiba mais</span>
+        <img src="../../assets/Svg/right_arrow.svg" class="wrapper_cta_svg" />
       </div>
-      <!-- <div class=""></div> -->
+    </div>
+
+    <img src="../../assets/Home/hand.png" class="image" />
+
+    <div class="wrapper">
+      <h2 class="wrapper__title">Nossos serviço</h2>
+      <h1 class="wrapper__main">
+        Falou em comida congelada de qualidade? Pensou no Feijones!
+      </h1>
+      <h2 class="wrapper__paragraph">
+        Chegamos para oferecer praticidade e sabor a sua rotina! O Feijones é o
+        seu novo contato de comida congelada, só que com uma diferença, nossos
+        pratos tem gostinho de comida caseira feita na hora.
+      </h2>
+
+      <span class="wrapper__cta">Peça agora</span>
     </div>
   </section>
 </template>
@@ -33,66 +41,45 @@ export default {};
 <style lang="postcss" scoped>
 @layer components {
   .services-container {
-    /* @apply h-screen w-screen overflow-x-hidden flex flex-row-reverse  items-center relative z-0; */
-    @apply h-screen w-screen overflow-x-hidden flex flex-row items-center justify-end relative z-0;
-    background-image: url("../../assets/background_cartes.png");
-    background-repeat: no-repeat;
+    @apply w-screen h-auto lg:h-screen flex flex-col items-center justify-center relative z-0 pb-10;
+    background-image: url("../../assets/background.png");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
   }
 
-  .services-container::after {
-    @apply absolute w-full h-full bg-white bg-opacity-50;
-    z-index: -1;
-    content: "";
+  .services-container::before {
+    @apply absolute top-0 right-0 w-full h-full;
+    background-color: "#F2F2F2";
+    opacity: 0.86;
+  }
+
+  .image {
+    @apply  lg:block lg:absolute bottom-0 -left-36 xl:-left-16 2xl:left-10;
   }
 
   .wrapper {
-    /* @apply lg:w-4/6 flex justify-center lg:justify-end xl:justify-end 2xl:justify-center; */
-    /* @apply flex justify-center bg-black; */
-    @apply pr-52;
+    @apply lg:flex-initial;
   }
 
-  .wrapper-box {
-    /* @apply bg-black; */
-    @apply pr-10 space-y-3;
-    max-width: 500px;
+  .wrapper__main {
+    @apply xl:max-w-2xl;
   }
 
-  .wrapper-title {
-    @apply lg:text-2xl xl:text-2xl font-black;
-    font-family: "Roboto Slab";
-    color: #593100;
+  .wrapper__cta {
+    @apply text-white py-2 lg:w-64 text-center px-20 rounded-xl cursor-pointer font-black font-roboto bg-neutral_intense;
   }
 
-  .wrapper-main-message {
-    @apply text-5xl xl:text-5xl leading-tight font-black;
-    font-family: "Roboto Slab";
-    color: #e47b18;
+  .wraper_cta_container {
+    @apply flex items-center cursor-pointer space-x-2 relative w-40;
   }
 
-  .wrapper-second-message {
-    @apply text-lg xl:text-2xl leading-tight mb-2 font-bold;
-    font-family: "Rockwell";
-    color: #593100;
+  .wrapper_cta_text {
+    @apply text-2xl leading-tight font-roboto font-black text-primary_intense;
   }
 
-  .wrapper-cta {
-    @apply text-white py-2 px-20 w-64 text-center rounded-xl cursor-pointer font-black;
-    background-color: #593100;
-    font-family: "Roboto Slab";
+  .wrapper_cta_svg {
+    @apply absolute bottom-0.5 right-0;
   }
-
-  /* @media (min-width: 1024px and max-width: 1280px) {
-    .services-container {
-      object-fit: contain;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .services-container {
-      background-size: contain;
-    }
-  } */
 }
 </style>

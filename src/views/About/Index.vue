@@ -1,19 +1,17 @@
 <template>
-    <First />
-    <AboutUs />
-    <Footer />
+  <div class="overflow-x-hidden"><First /> <About /><Last /></div>
 </template>
 
 <script>
-    import First from './First.vue'
-    import AboutUs from './AboutUs.vue'
-    import Footer from './Footer.vue'
-    export default {
-        components: {
-            First,
-            AboutUs,
-            Footer
-        }
-    }
-</script>
+import First from "./First.vue";
+import About from "./About.vue";
+import Last from "./Last.vue";
 
+export default {
+  components: {
+    First,
+    About,
+    Last,
+  },
+};
+</script>
