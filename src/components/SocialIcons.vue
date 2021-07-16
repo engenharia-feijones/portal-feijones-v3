@@ -1,7 +1,7 @@
 <template>
   <div class="social-container">
     <svg
-      @click="openInstagram()"
+      @click="openFacebook()"
       class="fb"
       width="20"
       height="20"
@@ -100,10 +100,10 @@ import { defineComponent } from "vue";
 export default defineComponent({
   setup() {
     const openInstagram = () => {
-      const url = `https://www.instagram.com/feijones_oficial/`;
+      const url = `https://www.instagram.com/feijonesoficial/`;
       window.open(url, "_blank");
     };
-    const openFacebok = () => {
+    const openFacebook = () => {
       const url = `https://www.facebook.com/profile.php?id=100066475050399`;
       window.open(url, "_blank");
     };
@@ -116,12 +116,12 @@ export default defineComponent({
       window.open(url, "_blank");
     };
     const openWhatsapp = () => {
-      const url = `https://api.whatsapp.com/send?phone=${5571999992891}&text=Olá, gostaria de ver o cardapio!`
+      const url = `https://api.whatsapp.com/send?phone=${5571999992891}&text=Olá, gostaria de ver o cardapio!`;
       window.open(url, "_blank");
     };
     return {
       openInstagram,
-      openFacebok,
+      openFacebook,
       openTwitter,
       openYoutube,
       openWhatsapp,
