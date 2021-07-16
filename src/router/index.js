@@ -4,6 +4,8 @@ import IndexAbout from "../views/About/Index.vue";
 import IndexService from "../views/Service/Index.vue";
 import Whatsapp from "../views/Whatsapp.vue";
 
+const userLang = navigator.language || navigator.userLanguage;
+
 const routes = [
   { path: "/", name: "Home", component: IndexHome },
   { path: "/about", name: "About", component: IndexAbout },
@@ -12,7 +14,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(`/${userLang}`),
   routes,
 });
 

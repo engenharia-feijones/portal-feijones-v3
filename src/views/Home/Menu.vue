@@ -1,7 +1,7 @@
 <template>
   <section id="about-menu" class="container-menu">
     <div class="wrapper">
-      <div class="wrapper__main">Nosso Sabores</div>
+      <div class="wrapper__main">Nossos Sabores</div>
       <div class="cards__container">
         <div class="card card__1">
           <h1 class="card__title">Marrom</h1>
@@ -16,11 +16,10 @@
         </div>
 
         <div class="card card__3">
-          <h1 class="card__title">Feijonada</h1>
+          <h1 class="card__title">Feijoada</h1>
           <div class="card__cta">Peça agora</div>
           <h1 class="card__info">Saiba mais</h1>
         </div>
-
       </div>
     </div>
   </section>
@@ -52,7 +51,7 @@ export default {};
   }
 
   .card {
-    @apply rounded-xl w-72 h-80 flex flex-col justify-center items-center lg:w-60 lg:h-80 ;
+    @apply rounded-xl w-72 h-80 flex flex-col justify-center items-center lg:w-60 lg:h-80;
   }
 
   .card__1 {
