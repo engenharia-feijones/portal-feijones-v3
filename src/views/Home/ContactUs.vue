@@ -32,7 +32,7 @@
         <textarea
           class="input__field text__area text-left"
           type="text"
-          placeholder="Deixei aqui sua mensagem"
+          placeholder="Deixe aqui a sua mensagem"
           v-model="comment.message"
         />
         <input class="input__field cta" type="submit" value="Enviar" />
