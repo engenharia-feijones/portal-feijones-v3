@@ -10,7 +10,7 @@
         caseiro, utilizando o delivery para ofertar comodidade aos nossos
         clientes.
       </h3>
-      <div class="wraper_cta_container">
+      <div class="wraper_cta_container" @click="goToAbout()">
         <span class="wrapper_cta_text">Saiba mais</span>
         <img src="../../assets/Svg/right_arrow.svg" class="wrapper_cta_svg" />
       </div>
@@ -19,7 +19,22 @@
 </template>
 
 <script>
-export default {};
+import { useRouter } from "vue-router";
+export default {
+  setup() {
+    const router = useRouter();
+
+    const goToAbout = () => {
+      scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      router.push("/about");
+    };
+
+    return { goToAbout };
+  },
+};
 </script>
 
 <style lang="postcss" scoped>

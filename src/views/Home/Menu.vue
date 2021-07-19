@@ -4,15 +4,17 @@
       <div class="wrapper__main">Nossos Sabores</div>
       <div class="cards__container">
         <div class="card card__1">
-          <h1 class="card__title">Marrom</h1>
-          <div class="card__cta">Peça agora</div>
-          <h1 class="card__info">Saiba mais</h1>
+          <h1 class="card__title">Completo</h1>
+          <div class="card__cta" @click="userWantIt('completo')">
+            Peça agora
+          </div>
+          <!-- <h1 class="card__info" @click="userWantIt('veganis')">Saiba mais</h1> -->
         </div>
 
         <div class="card card__2">
           <h1 class="card__title">Veganis</h1>
-          <div class="card__cta">Peça agora</div>
-          <h1 class="card__info">Saiba mais</h1>
+          <div class="card__cta" @click="userWantIt('veganis')">Peça agora</div>
+          <!-- <h1 class="card__info" @click="userWantIt('veganis')">Saiba mais</h1> -->
         </div>
 
         <!-- <div class="card card__3">
@@ -26,7 +28,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  setup() {
+    const userWantIt = (message) => {
+      const url = `https://api.whatsapp.com/send?phone=${5571999992891}&text=Olá, gostaria de pedir o feijones ${message}!`;
+      window.open(url, "_blank");
+    };
+
+    return { userWantIt };
+  },
+};
 </script>
 
 <style lang="postcss" scoped>

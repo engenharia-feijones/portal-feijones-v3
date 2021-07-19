@@ -4,7 +4,7 @@
     <a @click="navigateTo('/about')" class="header-links">Sobre nós</a>
     <a @click="navigateTo('/services')" class="header-links">Nossos Serviços</a>
     <a class="header-links">FAQ</a>
-    <a class="header-links cta">Peça o seu</a>
+    <a class="header-links cta" @click="openWhatsapp()">Peça o seu</a>
   </nav>
 </template>
 
@@ -21,8 +21,14 @@ export default {
       });
       route.push({ path });
     };
+
+    const openWhatsapp = () => {
+      const url = `https://api.whatsapp.com/send?phone=${5571999992891}&text=Olá, gostaria de ver o cardapio!`;
+      window.open(url, "_blank");
+    };
     return {
       navigateTo,
+      openWhatsapp,
     };
   },
 };

@@ -30,7 +30,7 @@
         satisfação.
       </h1>
 
-      <div class="wrapper_cta_container cursor-pointer">
+      <div class="wrapper_cta_container cursor-pointer" @click="goToServices()">
         <span class="wrapper_cta_text">Nossos Serviços</span>
         <img src="../../assets/Svg/right_arrow.svg" class="wrapper_cta_svg" />
       </div>
@@ -39,7 +39,22 @@
 </template>
 
 <script>
-export default {};
+import { useRouter } from "vue-router";
+export default {
+  setup() {
+    const router = useRouter();
+
+    const goToServices = () => {
+      scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      router.push("/services");
+    };
+
+    return { goToServices };
+  },
+};
 </script>
 
 <style lang="postcss" scoped>
@@ -63,13 +78,12 @@ export default {};
     @apply flex flex-col space-y-4 p-2;
   }
 
-
   .wrapper__paragraph {
     @apply font-arvo text-sm;
   }
 
   .wraper_cta_container {
-    @apply flex items-center cursor-pointer space-x-4 w-40 ;
+    @apply flex items-center cursor-pointer space-x-4 w-40;
   }
 
   .wrapper_cta_text {

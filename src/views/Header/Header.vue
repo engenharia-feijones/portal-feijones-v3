@@ -1,6 +1,6 @@
 <template>
   <div class="header-container">
-    <img src="../../assets/Svg/logo.svg" class="logo" />
+    <img src="../../assets/Svg/logo.svg" class="logo" @click="goToHome()" />
     <HeaderLinks class="hidden lg:block" />
     <div class="hamburger" @click="openMenu()">
       <svg
@@ -26,32 +26,37 @@
 <script>
 import { reactive, toRefs } from "vue";
 import HeaderLinks from "../../components/Header/HeaderLinks.vue";
-import MobileMenu from '../../components/Header/MobileMenu.vue'
+import MobileMenu from "../../components/Header/MobileMenu.vue";
+import { useRouter } from "vue-router";
 export default {
   components: {
     HeaderLinks,
-    MobileMenu
+    MobileMenu,
   },
   setup() {
+    const router = useRouter();
     const state = reactive({
       showMobile: false,
     });
-    
+
     const toggleMenu = () => {
       state.showMobile = !state.showMobile;
-    }
+    };
 
     const openMenu = () => {
-      state.showMobile = true 
-    }
+      state.showMobile = true;
+    };
     const closeMenu = () => {
-      state.showMobile = false
-    }
+      state.showMobile = false;
+    };
+
+    const goToHome = () => router.push("/");
 
     return {
       ...toRefs(state),
       openMenu,
-      closeMenu
+      closeMenu,
+      goToHome,
     };
   },
 };
@@ -63,7 +68,7 @@ export default {
     @apply flex justify-between items-center my-9 px-9 fixed w-screen  bg-white  bg-opacity-40 py-2 z-50;
   }
   .logo {
-    @apply h-20 lg:h-auto;
+    @apply h-20 lg:h-auto cursor-pointer;
   }
   .hamburger {
     @apply block lg:hidden cursor-pointer;

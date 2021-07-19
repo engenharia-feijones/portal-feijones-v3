@@ -29,13 +29,22 @@
         pratos tem gostinho de comida caseira feita na hora.
       </h2>
 
-      <span class="wrapper__cta">Peça agora</span>
+      <span class="wrapper__cta" @click="openWhatsapp()">Peça agora</span>
     </div>
   </section>
 </template>
 
 <script>
-export default {};
+export default {
+  setup() {
+    const openWhatsapp = () => {
+      const url = `https://api.whatsapp.com/send?phone=${5571999992891}&text=Olá, gostaria de ver o cardapio!`;
+      window.open(url, "_blank");
+    };
+
+    return { openWhatsapp };
+  },
+};
 </script>
 
 <style lang="postcss" scoped>
