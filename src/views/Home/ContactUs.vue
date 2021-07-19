@@ -1,6 +1,10 @@
 <template>
   <section id="contact-us" class="contact-container">
-    <img src="../../assets/Home/marmita.png" alt="" class="mt-10 lg:hidden" />
+    <img
+      src="../../assets/Home/marmita.png"
+      alt=""
+      class="mt-10 lg:hidden w-96 h-96"
+    />
     <h1 class="contact__title">Queremos te ouvir!</h1>
     <div class="lg:flex space-x-10">
       <form class="form__container" @submit.prevent="sendForm()">
@@ -37,7 +41,11 @@
         />
         <input class="input__field cta" type="submit" value="Enviar" />
       </form>
-       <img src="../../assets/Home/marmita.png" alt="" class="hidden lg:block mt-10" />
+      <img
+        src="../../assets/Home/marmita.png"
+        alt=""
+        class="hidden lg:block mt-10 marmita"
+      />
     </div>
   </section>
 </template>
@@ -93,6 +101,11 @@ export default defineComponent({
   .cta {
     @apply font-black cursor-pointer z-40;
     background-color: #40260f;
+  }
+
+  .marmita {
+    width: 500px;
+    height: 500px/;
   }
 }
 </style>

@@ -55,7 +55,9 @@ export default {};
   }
 
   .image {
-    @apply  lg:block lg:absolute bottom-0 -left-36 xl:-left-16 2xl:left-10;
+    @apply lg:block lg:absolute bottom-0 -left-36 xl:-left-16 2xl:left-10;
+    width: 513px;
+    height: 626px;
   }
 
   .wrapper {
