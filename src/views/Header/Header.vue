@@ -1,7 +1,30 @@
 <template>
   <div class="header-container">
     <img src="../../assets/Svg/logo.svg" class="logo" @click="goToHome()" />
-    <HeaderLinks class="hidden lg:block" />
+    <HeaderLinks
+      class="hidden lg:block lg:mr-10 relative"
+      @show-languages-menu="showLanguagesMenu = !showLanguagesMenu"
+    />
+
+    <div
+      v-if="showLanguagesMenu"
+      class="w-6 h-6 bg-white transform rotate-45 absolute right-20 bottom-0"
+    ></div>
+
+    <HeaderLanguage
+      v-if="showLanguagesMenu"
+      class="
+        absolute
+        right-14
+        -bottom-28
+        bg-white
+        p-2
+        pr-6
+        rounded-md
+        flex flex-col
+        items-end
+      "
+    />
     <div class="hamburger" @click="openMenu()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -24,13 +47,15 @@
 </template>
 
 <script>
-import { reactive, toRefs } from "vue";
+import { reactive, toRefs, ref } from "vue";
 import HeaderLinks from "../../components/Header/HeaderLinks.vue";
+import HeaderLanguage from "../../components/Header/HeaderLanguage.vue";
 import MobileMenu from "../../components/Header/MobileMenu.vue";
 import { useRouter } from "vue-router";
 export default {
   components: {
     HeaderLinks,
+    HeaderLanguage,
     MobileMenu,
   },
   setup() {
@@ -39,9 +64,7 @@ export default {
       showMobile: false,
     });
 
-    const toggleMenu = () => {
-      state.showMobile = !state.showMobile;
-    };
+    const showLanguagesMenu = ref(false);
 
     const openMenu = () => {
       state.showMobile = true;
@@ -57,6 +80,7 @@ export default {
       openMenu,
       closeMenu,
       goToHome,
+      showLanguagesMenu,
     };
   },
 };

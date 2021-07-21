@@ -51,10 +51,11 @@
 </template>
 
 <script>
-import { defineComponent, reactive } from "vue";
+import { defineComponent, ref } from "vue";
+
 export default defineComponent({
   setup() {
-    const comment = reactive({
+    const comment = ref({
       name: "",
       email: "",
       phone: "",
@@ -62,7 +63,33 @@ export default defineComponent({
       message: "",
     });
 
-    const sendForm = () => console.log(comment);
+    // const transporter = nodemailer.createTransport({
+    //   service: "gmail",
+    //   auth: {
+    //     user: "feijonesmailer@gmail.com",
+    //     pass: "cabare1234",
+    //   },
+    // });
+
+    const sendForm = () => {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "feijonesmailer@gmail.com",
+        Password: "cabare1234",
+        To: "feijonesmailer@gmail.com",
+        From: "feijonesmailer@gmail.com",
+        Subject: "Feedback",
+        Body: `
+        <h1>Nome: ${comment.value.name}</h1>
+        <h1>Telefone: ${comment.value.phone}</h1>
+        <h1>Assunto: ${comment.value.subject}</h1>
+        <h1>Mensagem: ${comment.value.message}</h1>
+        
+      `,
+      }).then((message) => console.log("mail sent successfully"));
+
+      comment.value = {};
+    };
 
     return {
       comment,

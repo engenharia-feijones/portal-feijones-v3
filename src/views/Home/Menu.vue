@@ -3,7 +3,7 @@
     <div class="wrapper">
       <div class="wrapper__main">Nossos Sabores</div>
       <div class="cards__container">
-        <div class="card card__1">
+        <div class="card card__2">
           <h1 class="card__title">Completo</h1>
           <div class="card__cta" @click="userWantIt('completo')">
             Peça agora
@@ -11,23 +11,30 @@
           <!-- <h1 class="card__info" @click="userWantIt('veganis')">Saiba mais</h1> -->
         </div>
 
-        <div class="card card__2">
+        <div class="card card__1">
           <h1 class="card__title">Veganis</h1>
           <div class="card__cta" @click="userWantIt('veganis')">Peça agora</div>
           <!-- <h1 class="card__info" @click="userWantIt('veganis')">Saiba mais</h1> -->
         </div>
 
-        <!-- <div class="card card__3">
+        <div class="card card__2">
+          <h1 class="card__title">Fit</h1>
+          <div class="card__cta">Peça agora</div>
+          <!-- <h1 class="card__info">Saiba mais</h1> -->
+        </div>
+
+        <div class="card card__1" v-if="isReleaseDay">
           <h1 class="card__title">Feijoada</h1>
           <div class="card__cta">Peça agora</div>
-          <h1 class="card__info">Saiba mais</h1>
-        </div> -->
+          <!-- <h1 class="card__info">Saiba mais</h1> -->
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import { computed } from "vue";
 export default {
   setup() {
     const userWantIt = (message) => {
@@ -35,7 +42,9 @@ export default {
       window.open(url, "_blank");
     };
 
-    return { userWantIt };
+    const isReleaseDay = computed(() => new Date().getDate() === 27);
+
+    return { userWantIt, isReleaseDay };
   },
 };
 </script>

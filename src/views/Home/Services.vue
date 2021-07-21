@@ -64,9 +64,7 @@ export default {
   }
 
   .image {
-    @apply lg:block lg:absolute bottom-0 -left-36 xl:-left-16 2xl:left-10;
-    width: 513px;
-    height: 626px;
+    @apply lg:block lg:absolute bottom-0 -left-36 xl:-left-16 2xl:left-10 max-w-md  lg:max-w-none;
   }
 
   .wrapper {
@@ -91,6 +89,13 @@ export default {
 
   .wrapper_cta_svg {
     @apply absolute bottom-0.5 right-0;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .image {
+      width: 513px;
+      height: 626px;
+    }
   }
 }
 </style>

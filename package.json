@@ -6,6 +6,8 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "install": "^0.13.0",
+    "nodemailer": "^6.6.3",
     "vue": "^3.0.5",
     "vue-router": "4",
     "vue-the-mask": "^0.11.1"

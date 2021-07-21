@@ -8,23 +8,38 @@
         X
       </h1>
       <img src="../../assets/Svg/logo.svg" />
-      <HeaderLinks @close-mobile="close()" class="flex flex-col" />
+      <HeaderLanguage
+        v-if="showLanguagesMenu"
+        @close-language-menu="showLanguagesMenu = false"
+      />
+      <HeaderLinks
+        @close-mobile="close()"
+        class="flex flex-col"
+        @show-languages-menu="showLanguagesMenu = true"
+        v-else
+      />
     </div>
   </div>
 </template>
 
 <script>
+import { ref } from "vue";
 import HeaderLinks from "./HeaderLinks.vue";
+import HeaderLanguage from "./HeaderLanguage.vue";
 export default {
   components: {
     HeaderLinks,
+    HeaderLanguage,
   },
 
   setup(props, { emit }) {
     const close = () => emit("close");
 
+    const showLanguagesMenu = ref(false);
+
     return {
       close,
+      showLanguagesMenu,
     };
   },
 };
@@ -37,7 +52,7 @@ export default {
   }
 
   .wrapper__mobile {
-    @apply bg-white h-auto w-96 rounded-xl shadow p-2 mx-2 flex flex-col items-center relative;
+    @apply bg-white h-auto w-96 rounded-xl shadow p-2 mx-2 flex flex-col items-center relative pb-4;
   }
 }
 </style>
