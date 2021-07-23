@@ -11,7 +11,7 @@
           <!-- <h1 class="card__info" @click="userWantIt('veganis')">Saiba mais</h1> -->
         </div>
 
-        <div class="card card__1">
+        <div class="card card__veganis">
           <h1 class="card__title">Veganis</h1>
           <div class="card__cta" @click="userWantIt('veganis')">Peça agora</div>
           <!-- <h1 class="card__info" @click="userWantIt('veganis')">Saiba mais</h1> -->
@@ -19,13 +19,15 @@
 
         <div class="card card__2">
           <h1 class="card__title">Fit</h1>
-          <div class="card__cta">Peça agora</div>
+          <div class="card__cta" @click="userWantIt('fit')">Peça agora</div>
           <!-- <h1 class="card__info">Saiba mais</h1> -->
         </div>
 
         <div class="card card__1" v-if="isReleaseDay">
           <h1 class="card__title">Feijoada</h1>
-          <div class="card__cta">Peça agora</div>
+          <div class="card__cta" @click="userWantIt('feijoada')">
+            Peça agora
+          </div>
           <!-- <h1 class="card__info">Saiba mais</h1> -->
         </div>
       </div>
@@ -84,6 +86,16 @@ export default {
     z-index: 1;
   }
 
+  .card__veganis {
+    background-image: url("../../assets/Home/veganis.png");
+    background-color: #6b3a0b;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+  }
+
   .card__2 {
     background-image: url("../../assets/Home/charque.png");
     background-color: #6b3a0b;
@@ -104,6 +116,7 @@ export default {
     z-index: 1;
   }
 
+  .card__veganis::before,
   .card__1::before,
   .card__2::before,
   .card__3::before {

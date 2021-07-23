@@ -1,14 +1,14 @@
 <template>
   <section id="first-service" class="container__first">
     <div class="wrapper">
-      <h3 class="wrapper__title">Nosso Serviço</h3>
+      <h3 class="wrapper__title">Nosso Serviços</h3>
       <h1 class="wrapper__main">
         Falou em feijão e tecnologia?<br />Pensou no Feijones!
       </h1>
       <h2 class="wrapper__paragraph">
         Chegamos para oferecer praticidade e sabor a sua rotina!<br />
         O Feijones é o seu novo contato de comida congelada, <br />só que com
-        uma diferença,<br />nossos pratos tem gostinho de comida caseira feita
+        uma diferença,<br />nossos pratos têm gostinho de comida caseira feita
         na hora.
       </h2>
       <div class="wrapper_cta_container">
@@ -67,7 +67,7 @@ export default {};
   }
 
   .wrapper_cta_svg {
-    @apply  ml-2 inline translate-y-2;
+    @apply ml-2 inline translate-y-2;
   }
 }
 </style>

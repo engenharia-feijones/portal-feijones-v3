@@ -19,7 +19,7 @@
     <img src="../../assets/Home/hand.png" class="image" />
 
     <div class="wrapper">
-      <h2 class="wrapper__title">Nossos serviço</h2>
+      <h2 class="wrapper__title">Nossos Serviços</h2>
       <h1 class="wrapper__main">
         Falou em comida congelada de qualidade? Pensou no Feijones!
       </h1>

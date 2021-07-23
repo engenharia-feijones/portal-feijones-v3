@@ -2,7 +2,7 @@
   <div class="overflow-x-hidden">
     <About />
     <Services />
-    <Menu />
+    <Menu id="home__menu" />
     <Comments />
     <ContactUs />
   </div>
@@ -20,7 +20,29 @@ export default {
     Services,
     Menu,
     Comments,
-    ContactUs
+    ContactUs,
+  },
+
+  props: {
+    isMenuClick: {
+      type: [Boolean, String],
+      default: false,
+    },
+  },
+
+  watch: {
+    isMenuClick() {
+      if (this.isMenuClick) {
+        const menu = document.getElementById("home__menu");
+        menu.scrollIntoView({ behavior: "smooth" });
+      }
+    },
+  },
+  mounted() {
+    if (this.isMenuClick) {
+      const menu = document.getElementById("home__menu");
+      menu.scrollIntoView({ behavior: "smooth" });
+    }
   },
 };
 </script>

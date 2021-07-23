@@ -7,7 +7,12 @@ import Whatsapp from "../views/Whatsapp.vue";
 const userLang = navigator.language || navigator.userLanguage;
 
 const routes = [
-  { path: "", name: "Home", component: IndexHome },
+  {
+    path: "",
+    name: "Home",
+    component: IndexHome,
+    props: true,
+  },
   { path: "/about", name: "About", component: IndexAbout },
   { path: "/services", name: "Service", component: IndexService },
   { path: "/whatsapp", name: "Whatsapp", component: Whatsapp },

@@ -39,6 +39,12 @@
           placeholder="Deixe aqui a sua mensagem"
           v-model="comment.message"
         />
+        <h1
+          class="text-white font-medium input__field"
+          v-if="showSucessMessage"
+        >
+          Agradecemos pelo seu feedback!
+        </h1>
         <input class="input__field cta" type="submit" value="Enviar" />
       </form>
       <img
@@ -63,13 +69,14 @@ export default defineComponent({
       message: "",
     });
 
-    // const transporter = nodemailer.createTransport({
-    //   service: "gmail",
-    //   auth: {
-    //     user: "feijonesmailer@gmail.com",
-    //     pass: "cabare1234",
-    //   },
-    // });
+    const showSucessMessage = ref(false);
+
+    const toggleMessageField = () => {
+      showSucessMessage.value = true;
+      setTimeout(() => {
+        showSucessMessage.value = false;
+      }, 10000);
+    };
 
     const sendForm = () => {
       Email.send({
@@ -86,13 +93,14 @@ export default defineComponent({
         <h1>Mensagem: ${comment.value.message}</h1>
         
       `,
-      }).then((message) => console.log("mail sent successfully"));
+      }).then(() => toggleMessageField());
 
       comment.value = {};
     };
 
     return {
       comment,
+      showSucessMessage,
       sendForm,
     };
   },

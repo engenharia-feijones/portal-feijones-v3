@@ -73,7 +73,12 @@ export default {
       state.showMobile = false;
     };
 
-    const goToHome = () => router.push("/");
+    const goToHome = () => {
+      scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
 
     return {
       ...toRefs(state),

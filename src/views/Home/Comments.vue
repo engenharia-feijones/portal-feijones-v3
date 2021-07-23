@@ -6,12 +6,12 @@
         <div class="comment-info-box">
           <div class="comment-avatar">
             <img
-              src="https://i2.wp.com/www.criarfacebook.com/wp-content/uploads/2016/08/perfil-facebook.jpg?resize=400%2C250&ssl=1"
+              src="../../assets/Home/comment_van.jpeg"
               class="comment-avatar"
             />
           </div>
           <div class="comment-social">
-            <h1 class="comment-social-name">Jéssica</h1>
+            <h1 class="comment-social-name">Claudevânio</h1>
             <h2 class="comment-social-city">Camaçari, BA</h2>
           </div>
           <div class="comment-icon">
@@ -37,8 +37,9 @@
         </div>
         <div class="comment-message">
           <p>
-            Meu filho já indiquei, já botei nos story do Instagram. Deliciosa
-            indico de olhos fechados!
+            Sabor diferenciado! Muito prático e encaixa-se perfeitamente na
+            minha rotina, por vir congelado e em porções adequadas. Super
+            recomendo!
           </p>
         </div>
       </div>
@@ -124,7 +125,7 @@
           <div class="comment-avatar h-16 w-16">
             <div class="comment-avatar">
               <img
-                src="https://i2.wp.com/www.criarfacebook.com/wp-content/uploads/2016/08/perfil-facebook.jpg?resize=400%2C250&ssl=1"
+                src="../../assets/Home/comment_jerlaine.jpeg"
                 class="comment-avatar"
               />
             </div>

@@ -104,7 +104,7 @@ export default defineComponent({
       window.open(url, "_blank");
     };
     const openFacebook = () => {
-      const url = `https://www.facebook.com/profile.php?id=100066475050399`;
+      const url = `https://www.facebook.com/feijonesoficial`;
       window.open(url, "_blank");
     };
     const openTwitter = () => {

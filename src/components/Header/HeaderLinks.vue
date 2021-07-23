@@ -2,8 +2,8 @@
   <nav class="nav-container">
     <a @click="navigateTo('/')" class="header-links">Início</a>
     <a @click="navigateTo('/about')" class="header-links">Sobre nós</a>
-    <a @click="navigateTo('/services')" class="header-links">Nossos Serviços</a>
-    <a class="header-links">FAQ</a>
+    <a class="header-links" @click="goToMenu()">Nossos Sabores</a>
+    <a class="header-links" @click="navigateTo('/')">FAQ</a>
     <a class="header-links cta" @click="openWhatsapp()">Peça o seu</a>
     <img
       src="../../assets/Svg/language.svg"
@@ -20,12 +20,17 @@ export default {
   setup(props, { emit }) {
     const route = useRouter();
     const navigateTo = (path) => {
-      emit("close-mobile");
       scrollTo({
-        top: 0,
+        top: 10,
         behavior: "smooth",
       });
-      route.push({ path });
+      emit("close-mobile");
+      route.push(path);
+    };
+
+    const goToMenu = () => {
+      route.push({ name: "Home", params: { isMenuClick: true } });
+      emit("close-mobile");
     };
 
     const openWhatsapp = () => {
@@ -35,6 +40,7 @@ export default {
     return {
       navigateTo,
       openWhatsapp,
+      goToMenu,
     };
   },
 };
