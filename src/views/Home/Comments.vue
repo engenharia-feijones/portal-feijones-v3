@@ -1,7 +1,18 @@
 <template>
   <section id="comments" class="comments-container">
     <div class="comment-container-title">Contra fatos não há argumentos!</div>
-    <div class="comments-wrapper">
+    <div
+      class="
+        hidden
+        lg:flex
+        items-center
+        justify-center
+        mx-3
+        space-x-6
+        w-full
+        relative
+      "
+    >
       <div class="comment-content inactive">
         <div class="comment-info-box">
           <div class="comment-avatar">
@@ -198,17 +209,32 @@
         </div>
       </div>
     </div>
+    <MobileSwipper
+      class="
+        flex flex-col
+        lg:hidden
+        items-center
+        justify-center
+        w-full
+        relative
+      "
+    />
   </section>
 </template>
 
 <script>
-export default {};
+import MobileSwipper from "../../components/Comments/MobileSwiper.vue";
+export default {
+  components: {
+    MobileSwipper,
+  },
+};
 </script>
 
 <style lang="postcss" scoped>
 @layer components {
   .comments-container {
-    @apply h-auto lg:h-screen w-screen relative z-0 flex flex-col justify-center items-center pb-2 lg:pb-0;
+    @apply h-auto lg:h-screen w-screen relative z-0  flex flex-col justify-center items-center pb-2 lg:pb-0;
     background-image: url("../../assets/background.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -223,10 +249,6 @@ export default {};
   .comment-container-title {
     @apply text-4xl font-black font-roboto text-center my-6 lg:text-6xl;
     color: #644016;
-  }
-
-  .comments-wrapper {
-    @apply flex items-center justify-center  mx-3 space-x-6 w-full relative;
   }
 
   .comment-content {

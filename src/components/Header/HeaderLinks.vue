@@ -3,7 +3,7 @@
     <a @click="navigateTo('/')" class="header-links">Início</a>
     <a @click="navigateTo('/about')" class="header-links">Sobre nós</a>
     <a class="header-links" @click="goToMenu()">Nossos Sabores</a>
-    <a class="header-links" @click="navigateTo('/')">FAQ</a>
+    <a class="header-links">FAQ</a>
     <a class="header-links cta" @click="openWhatsapp()">Peça o seu</a>
     <img
       src="../../assets/Svg/language.svg"

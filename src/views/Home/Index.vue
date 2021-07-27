@@ -14,6 +14,7 @@ import Services from "./Services.vue";
 import Menu from "./Menu.vue";
 import Comments from "./Comments.vue";
 import ContactUs from "./ContactUs.vue";
+
 export default {
   components: {
     About,

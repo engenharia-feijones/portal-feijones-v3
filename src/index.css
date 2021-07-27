@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&display=swap");
+@import url(//db.onlinewebfonts.com/c/141449d91ea53b0c3f08600f47ecbc0c?family=Gloucester+MT+Extra+Condensed);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

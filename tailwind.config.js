@@ -12,12 +12,16 @@ module.exports = {
         neutral: "#37210C",
         neutral_intense: "#593100",
         neutral_dark: "#000000",
+        cupom_primary: "#E48F2B",
+        cupom_background: "#ECC8B0",
+        cupom_brow: "#341900",
       },
 
       fontFamily: {
-        roboto: ['Roboto Slab', 'sans-serif'],
-        arvo: ['Arvo', 'sans-serif']
-      }
+        roboto: ["Roboto Slab", "sans-serif"],
+        arvo: ["Arvo", "sans-serif"],
+        glocuester: ["Gloucester", "Arvo"],
+      },
     },
   },
   variants: {
