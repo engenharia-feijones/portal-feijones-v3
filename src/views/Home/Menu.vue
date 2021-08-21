@@ -23,7 +23,7 @@
           <!-- <h1 class="card__info">Saiba mais</h1> -->
         </div>
 
-        <div class="card card__1" v-if="false">
+        <div class="card card__1">
           <h1 class="card__title">Feijoada</h1>
           <div class="card__cta" @click="userWantIt('feijoada')">
             Peça agora
